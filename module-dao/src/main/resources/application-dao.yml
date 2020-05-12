@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    # mysql 数据库驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.101.135.160:3306/apecome?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    password: root
+    username: root
+
+mybatis-plus:
+  # xml映射文件位置，多个用逗号隔开
+  mapper-locations: classpath*:/mapper/xml/*.xml
+  # 别名包扫描路径，通过该属性可以给包中的类注册别名
+  # type-aliases-package: com.jinhaoxun.common.pojo
+  # configuration:
+  # 开启 MybatisPlus 二级缓存，主要用来跟redis注解缓存使用
+  cache-enabled: true
+  # 开启 MybatisPlus SQL日志打印
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

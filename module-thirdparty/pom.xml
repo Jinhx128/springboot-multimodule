@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.jinhaoxun</groupId>
+        <artifactId>springboot-multimodule</artifactId>
+        <version>1.0.0</version>
+        <!-- 从存储库查找父级 -->
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- maven可以继承父项目中的参数，所以可以删除子模块中定义 -->
+    <!--<groupId>com.jinhaoxun</groupId>-->
+    <artifactId>multimodule-thirdparty</artifactId>
+    <!--<version>1.0.0</version>-->
+    <name>multimodule-thirdparty</name>
+    <description>MultiModule Thirdparty</description>
+
+    <!--统一版本号配置 -->
+    <properties>
+    </properties>
+
+    <dependencies>
+
+        <!-- multimodule-common 模块 -->
+        <dependency>
+            <groupId>com.jinhaoxun</groupId>
+            <artifactId>multimodule-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- Jedis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+
+        <!-- SpringBoot-Redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+    </build>
+
+</project>

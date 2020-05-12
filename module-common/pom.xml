@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.jinhaoxun</groupId>
+        <artifactId>springboot-multimodule</artifactId>
+        <version>1.0.0</version>
+        <!-- 从存储库查找父级 -->
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- maven可以继承父项目中的参数，所以可以删除子模块中定义 -->
+<!--    <groupId>com.jinhaoxun</groupId>-->
+    <artifactId>multimodule-common</artifactId>
+<!--    <version>1.0.0</version>-->
+    <name>multimodule-common</name>
+    <description>MultiModule Common</description>
+
+    <properties>
+    </properties>
+
+    <dependencies>
+
+        <!-- 密码加密 https://mvnrepository.com/artifact/org.mindrot/jbcrypt -->
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+
+        <!-- MySQL-数据库驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- src/main/resources下的指定资源放行 -->
+                <includes>
+                    <include>**/*.yml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+</project>

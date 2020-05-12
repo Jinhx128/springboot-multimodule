@@ -1,0 +1,14 @@
+# http 服务端口
+server:
+    port: 8083
+
+spring:
+  # 配置子模块yml文件
+  profiles:
+    include: common,dao,service,thirdparty
+  # spirng 热部署
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+    freemarker:
+      cache: false   #页面不加载缓存，修改即时生效

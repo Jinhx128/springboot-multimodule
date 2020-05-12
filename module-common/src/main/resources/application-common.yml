@@ -1,0 +1,6 @@
+threadPoolTaskExecutor:
+  corePoolSize: 10
+  maxPoolSize: 100
+  keepAliveTime: 10
+  queueCapacity: 200
+  threadNamePrefix: Async-Executor-

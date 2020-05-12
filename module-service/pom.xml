@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.jinhaoxun</groupId>
+        <artifactId>springboot-multimodule</artifactId>
+        <version>1.0.0</version>
+        <!-- 从存储库查找父级 -->
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- maven可以继承父项目中的参数，所以可以删除子模块中定义 -->
+    <!--<groupId>com.jinhaoxun</groupId>-->
+    <artifactId>multimodule-service</artifactId>
+    <!--<version>1.0.0</version>-->
+    <name>multimodule-service</name>
+    <description>MultiModule Service</description>
+
+    <!--统一版本号配置 -->
+    <properties>
+    </properties>
+
+    <dependencies>
+
+        <!-- multimodule-dao 模块 -->
+        <dependency>
+            <groupId>com.jinhaoxun</groupId>
+            <artifactId>multimodule-dao</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- multimodule-thirdparty 模块 -->
+        <dependency>
+            <groupId>com.jinhaoxun</groupId>
+            <artifactId>multimodule-thirdparty</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+    </build>
+
+</project>
